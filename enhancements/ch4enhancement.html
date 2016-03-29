@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Chapter 4 Enhancement | Web Backend Development</title>
+	<meta name="description" content="Chapter 4 Enhancement">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/brainhoney.min.css" media="screen">
+</head>
+
+<body>
+	<header id="page_header"></header>
+	<main>
+		<h1>Chapter 4 Enhancement</h1>
+		<h2>Purpose</h2>
+		<p>Each enhancement provides an opportunity to solve problems and apply the concepts covered in the current and previous week's topics.</p>
+
+		<h2>Assumptions</h2>
+		<p>This enhancement requires that you start where exercise 4-1 ended. It is anticipated that you will have completed the exercise on your own so that you are familiar with the application and how it operates. You can begin the enhancement by using the exercise solution code provided by the publisher, but using your own working code is encouraged.</p>
+
+		<h2>Make a Copy</h2>
+		<p>Prior to beginning the enhancement, make a copy of the finished exercise folder and paste it to a homework area in your site. Rename the pasted folder to represent the enhancement. Do all work on the enhancement in this location. Do NOT overwrite your chapter exercise doing the enhancement. Keep them separate.</p>
+
+		<h2>Reminder</h2>
+		<ol>
+			<li>Replace all references to the publishers database connection file with your own database connection file.</li>
+		</ol>
+
+
+		<h2>Tasks</h2>
+		<p>The Ch. 4 enhancement requires you to further enhance the Product Manager application by adding two additional features:</p>
+
+		<ol>
+			<li>Add another column to the Product List table in the index page that contains Edit buttons for each item in the list similar to the illustration below:
+				<br>
+				<img src='../images/editcolumn4-1.png' alt='Image of the edit button column'>
+			</li>
+			<li>
+				These buttons should link to an Edit Product page that works similarly to the Add Product page, but this page should show the data for the selected product and allow the data to be updated, then have an Update Product button below the text boxes. See an illustration of the Edit Product page below:
+				<br>
+				<img src='../images/edititem4-1.png' alt='Image of the edit item page'>
+			</li>
+			<li> When this button is clicked, the product information should be updated using an update products page (similar to the add_product page). Make sure that the productID is not editable in the update products page.</li>
+			<li>To keep things simple, display the category ID in a text box in the update products page. For extra usability to benefit the site visitor, use a drop-down list to display the correct category name for the product that’s being edited.</li>
+		</ol>
+
+		<h2>Submission</h2>
+		<ul>
+			<li>Build and test your code in the local development environment.</li>
+			<li>Check your work to insure that it is operating correctly.</li>
+			<li>When satisfied that the code is operational, upload the enhancement folder to the remote production server.</li>
+			<li>Create a link from your exercises page to the index page in the enhancement folder and test that it works.</li>
+			<li>Fully test the enhancement application for operation on the production server. Correct any errors that are found.</li>
+			<li>When done, submit the revised index page, product update page and product update processing page to the code submission dropbox using the directions found there.</li>
+		</ul>
+
+		<h2>Grading Matrix</h2>
+		<ul>
+			<li>Index View: New table column containing <i>Edit</i> buttons is present: 2 points in objective 1</li>
+			<li>Edit view: When button is clicked, new edit product view is presented with data for the item that is editable: 3 points in objective 2</li>
+			<li>Edit view: Contains PHP and SQL code to retrieve data for the item to be edited: 7 points in objective 4</li>
+			<li>Edit view: Change a value for the item. Submit the change. New value appears in the product list: 3 points in objective 2</li>
+			<li>Update controller: This page contains the PHP code to process the update to the database, including:
+				<ol>
+					<li>Filter incoming data: 3 points in objective 2</li>
+					<li>Validate inputs: 3 points in objective 2</li>
+					<li>Handle errors: 1 point in objective 2</li>
+					<li>Update the database using prepared statement: 5 points in objective 2</li>
+					<li>Return the view where the update can be seen: 1 point in objective 2</li>
+				</ol>
+			</li>
+			<li>Enhancement values:
+				<ul>
+					<li>Objective 1: 2 points</li>
+					<li>Objective 2: 19 points</li>
+					<li>Objective 4: 7 points</li>
+				</ul>
+			</li>
+		</ul>
+
+	</main>
+</body>
+
+</html>

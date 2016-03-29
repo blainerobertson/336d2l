@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>XAMPP for Windows | Web Backend Development</title>
+	<meta name="description" content="Installing XAMPP for Windows">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/brainhoney.min.css" media="screen">
+</head>
+
+<body>
+	<header id="page_header"></header>
+	<main>
+		<h1>XAMPP for Windows</h1>
+		<h2>Introduction</h2>
+		<p>An ideal situation for web development is to have a local environment for development and testing and a remote production environment for distributing your work to the rest of the world. To create a local environment requires the installation of server software on your own machine. For web development using PHP, this is known as an "<abbr title="Apache, MySQL and PHP">AMP</abbr>" (Apache, MySQL and PHP) stack. This software bundle gives your machine many of the same capabilities as a dedicated server. On Windows, the current bundle discussed in this tutorial is XAMPP (Apache, MariaDB, PHP and PERL) for Windows.</p>
+
+		<h2>Download</h2>
+		<p>Using your web browser go to <a href="http://www.apachefriends.org/" target="_blank" title="Go to apachefriends.org in a new tab">apachefriends.org</a>. Once there, find and download the stable version of XAMPP shown on the home page (5.6.15 as of January 2016) version for Windows. Save the installation file to your machine. <b>Do NOT install PHP 7.0</b></p>
+
+		<h2>Installation</h2>
+		<ol>
+			<li>Locate and launch the downloaded installation file on your computer.</li>
+			<li>If presented with the security warning(s) asking if it is OK for the software to change your PC?, proceed by clicking "Yes".</li>
+			<li>You will also be warned about your User Account Control not allowing for installation to the Program Files. Click "OK".</li>
+			<li>When the install begins you will shown a list of software to install. Leave only the following checkboxes checked:
+				<ol>
+					<li>Apache</li>
+					<li>MySQL</li>
+					<li>PHP</li>
+					<li>phpMyAdmin</li>
+					<li>Clear all other checkboxes!</li>
+				</ol>
+			</li>
+			<li>On the following screen make sure the installation folder is located at "C:\xampp"</li>
+			<li>On the following screen, turn off the checkbox asking if you want to learn more about XAMPP on Bitnami, then click "Next".</li>
+			<li>Finally click "Next" until the installation finishes, then click "Finish".</li>
+		</ol>
+
+		<p><img src="../images/xamppwindows/winxamppfinish.jpg" alt="XAMPP Finished Installing Page" title="XAMPP Finished Installing Page"></p>
+
+		<ol>
+			<li value="7">If the installation finished successfully XAMPP should start automatically and launch the control panel.</li>
+		</ol>
+
+		<p><img src="../images/xamppwindows/xamppwincontrol.jpg" alt="XAMPP for Windows control panel" title="XAMPP for Windows control panel"></p>
+
+		<h2>Starting Apache and the Database servers</h2>
+		<ol>
+			<li>The control panel has buttons for both Apache and MySQL (the database server).</li>
+			<li>Apache should start automatically. If it does not, consult the Troubleshooting section.</li>
+			<li>To manually start either of these servers, simply click the "Start" button on the respective row.</li>
+			<li>When the process starts the text background will turn green and the port numbers will appear.</li>
+			<li>When the Apache server is running, click the "Admin" button and a browser window should open showing the localhost (your computer) start page.</li>
+			<li>If you see the start page, the server is installed and running as it should.</li>
+		</ol>
+
+		<p><img src="../images/xamppwindows/winsplash.jpg" alt="XAMPP Splash Page" title="XAMPP Splash Page"></p>
+
+		<h2>Troubleshooting</h2>
+		<h3>Apache Will Not Start</h3>
+		<ol>
+			<li>Normally the Apache server should start without issues.</li>
+			<li>However, if it will not start it is typically because another web server is already running and will have to be stopped.</li>
+			<li>Launch the Windows Task Manager (Control + Alt + Delete keys held down together).</li>
+			<li>Click the Task Manager link.</li>
+			<li>In the Task Manager, click the "Processess" tab and look in the "Background Processes" list.</li>
+			<li>If you see an "Apache HTTP Server" in the list click it, then click the "End Task" button until that process disappears.</li>
+			<li>When it is removed from the list, return to the XAMPP Control Panel and click the "Start" button for Apache.</li>
+			<li>It should start and the background for the Apache text should turn green.</li>
+		</ol>
+
+		<h3>Changing the SSL Port</h3>
+			<ol>
+				<li>If you receive an error that Apache cannot start because Port 443 is in use by another program, click the "Config" button next to Apache. Find and open the Apache (httpd-ssl.conf) option. Then find where Port 443 is specified and change the Port to 444, save and close the file. Then try starting Apache again.</li>
+				<li>Once the Apache text appears with a green background, the server has successfully started.</li>
+			</ol>
+
+		<h2>The Site Root</h2>
+		<p>Every web server has a "root" or a folder that holds all of the assets of the web site. In XAMPP that folder is found in C: drive &gt; xampp &gt; htdocs. Please locate it now.</p>
+
+		<p>By default, it already has files and folders in it, do not delete anything until you know what they do. You will add your own files to this folder as you build your own site locally before sending it to your production server (purchased hosting) for everyone in the world to see. The name of the root on the web hosting server will probably not be "htdocs", but it will be important to know what it is, because we will use it in other ways. The name of the remote root folder should be part of the information sent to you by your hosting company when you purchased your hosting.</p>
+
+		<h2>Running and Stopping XAMPP</h2>
+		<p>Running servers on your local machine is a useful tool, but one that can potentially use much of your computer's resources. Therefore, it is important to start XAMPP only when you are developing and testing using PHP and shut it down when finished.</p>
+
+		<h3>Starting XAMPP</h3>
+		<p>Launch XAMPP from your applications list. Then click the Apache and MySQL servers and "Start" for each.</p>
+
+		<h3>Stopping XAMPP</h3>
+		<p>When shutting down, be sure to stop any servers that are running my clicking the "Stop" button next to each one that is green. Then quit XAMPP. If you quit XAMPP before stopping the servers they may continue to run in the background.</p>
+
+		<h2>Video Version</h2>
+		<iframe src="https://www.youtube.com/embed/f3sWx3EixPI" allowfullscreen="1"></iframe>
+		<p><i>When you are done with the installation be sure to click the &ldquo;Mark this activity as completed&rdquo; button.</i></p>
+	</main>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Chapter 5 Enhancement | Web Backend Development</title>
+	<meta name="description" content="Chapter 5 Enhancement">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/brainhoney.min.css" media="screen">
+</head>
+
+<body>
+	<header id="page_header"></header>
+	<main>
+		<h1>Chapter 5 Enhancement</h1>
+		<h2>Purpose</h2>
+		<p>Each enhancement provides an opportunity to solve problems and apply the concepts covered in the current and previous week's topics.</p>
+
+		<h2>Assumptions</h2>
+		<p>This enhancement requires that you start where exercise 5-1 ended. It is anticipated that you will have completed the exercise on your own so that you are familiar with the application and how it operates. You can begin the enhancement by using the exercise solution code provided by the publisher, but using your own working code is encouraged.</p>
+
+		<h2>Make a Copy</h2>
+		<p>Prior to beginning the enhancement, make a copy of the finished exercise folder and paste it to a homework area in your site. Rename the pasted folder to represent the enhancement. Do all work on the enhancement in this location. Do NOT overwrite your chapter exercise doing the enhancement. Keep them separate.</p>
+
+		<h2>Reminders</h2>
+		<ol>
+			<li>Replace all references to the publishers database connection file with your own database connection file.</li>
+			<li>In the header file, found in the view folder, change the path to the main.css file if needed to make sure it functions in all views,</li>
+		</ol>
+
+		<h2>Tasks</h2>
+		<p>The Ch. 5 enhancement is identical to the Ch. 4 enhancement in outcome, it is the process that changes. To complete this enhancement you will implement the <abbr title='Create, Read, Update, Delete'>CRUD</abbr> functionality using an <abbr title='Model - View - Control'>M-V-C</abbr> approach in order to implement the edit capabilities of the product manager application.</p>
+
+		<ol>
+			<li>Add another column to the Product List table in the index page that contains Edit buttons for each item in the list similar to the illustration below:<br>
+				<img src='../images/editcolumn4-1.png' alt='Image of the edit button column'>
+			</li>
+			<li>
+				These buttons should link to an Edit Product page that works similarly to the Add Product page, but this page should show the data for the selected product and allow the data to be updated, then have an Update Product button below the text boxes. See an illustration of the Edit Product page below:<br>
+				<img src='../images/edititem4-1.png' alt='Image of the edit item page'>
+			</li>
+			<li> When this button is clicked, the product information should be updated using an update products page (similar to the add_product page). Make sure that the productID is not editable in the update products page.</li>
+			<li>To keep things simple, display the category ID in a text box in the update products page. For extra practice (optional), use a drop-down list to display the correct category name for the product that’s being edited.</li>
+		</ol>
+
+		<h2>Submission</h2>
+		<ul>
+			<li>Build and test your code in the local development environment.</li>
+			<li>Check your work to insure that it is operating correctly.  Be sure to check the database to see that data is being updated.</li>
+			<li>When satisfied that the code is operational, upload the enhancement folder to the remote production server.</li>
+			<li>Create a link from your exercises page to the index page in the enhancement folder and test that it works.</li>
+			<li>Fully test the enhancement application (including the database) for operation on the production server. Correct any errors that are found.</li>
+			<li>When completed, submit the revised index page, edit product page and product_db model to the code submission dropbox using the directions found there.</li>
+		</ul>
+
+		<h2>Grading Matrix</h2>
+		<ul>
+			<li>Functionality: Product data can be updated:  5 points [objective 2]</li>
+			<li>Data Validation: Server-side data filtering and error checking are in place and operational: 5 points [objective 5]</li>
+			<li>MVC has been implemented [objective 3]:
+				<ol>
+					<li>Database interactions are in the model and are fully functional: 10 points</li>
+					<li>Application control is in the controller and is fully functional: 10 points</li>
+					<li>Client interactions are in views, which are called by the controller and are fully functional: 10 points</li>
+				</ol>
+			</li>
+			<li>Enhancement values:
+				<ul>
+					<li>Objective 2: 5 points</li>
+					<li>Objective 3: 30 points</li>
+					<li>Objective 5: 5 points</li>
+				</ul>
+			</li>
+		</ul>
+	</main>
+</body>
+
+</html>
