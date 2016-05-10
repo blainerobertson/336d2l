@@ -14,131 +14,13 @@
 
 <body>
 	<div id="main">
-	<header id="header"><img src="../images/bs_small_banner.jpg" alt="CIT 336 Banner Image"></header>
-	<main>
-		<article id="article">
-		<h1>Unit 2 Exam</h1>
-		<h2>Directions</h2>
-		<p><i>You may use any resource except another person to complete this exam.</i></p>
-		<h3>Get the Seed Code</h3>
-		<p><a href="../downloads/tech_support.zip" target="_blank">Download the seed code</a>.</p>
-		<h3>Create the Database</h3>
-		<ol>
-			<li>Create a &lsquo;tech_support&rsquo; database in both the remote and local environments as done with the guitar database in Chapter 3. Alter the name as needed to work.</li>
-			<li>You may reuse the existing proxy user with the new database in both environments, and the same rights should exist with the new database: SELECT, INSERT, UPDATE, and DELETE.</li>
-			<li>Import the tables and data using the sql file provided in the downloaded seed code.</li>
-			<li>You will need a database connection file with a connection to the new database. Test that it works.</li>
-			<li>In the product_register controller, reference the database connection file with the new connection created in step 4 above.</li>
-		</ol>
-		<h3>Set up the Work Space</h3>
-		<ol>
-			<li>In the local environment, copy the tech_support folder from the download file to a location in the htdocs folder. All work should be performed here.</li>
-			<li>It is vital that you complete the exam in the local environment and then upload and thoroughly test the finished application in the production environment.</li>
-			<li><b>There should be no link to the exam on your web site</b>. The exam should be accessed only by typing &ldquo;tech_support&rdquo; at the end of your URL.</li>
-		</ol>
-		<h2 id="outcomes">Outcomes</h2>
-		<p>You&rsquo;ll create an application that allows a customer to register a product. The products and customers already exist in the database. To successfully complete this exam, you will:</p>
-		<ol>
-			<li>Create a &ldquo;Login&rdquo; page that requires a customer to enter a valid email address prior to being able to register a product. See &ldquo;Login page&rdquo; below. [This is not a true login. The customer will have to pass through this page for each product registration and enter their email address each time.]</li>
-			<li>Having passed through the login page, the customer can register a product without having to enter her or his name into the form, their name is captured and inserted into the register product form based on the login. See the &ldquo;Register Product view 1&rdquo; page below.</li>
-			<li>Store the registration information in the registrations table.</li>
-			<li>When the registration is complete, deliver a confirmation. See &ldquo;Register Product view 2&rdquo; below.&nbsp;</li>
-		</ol>
-		<h2 id="implementation">Implementation Expectations</h2>
-		<ol>
-			<li>The applications will be written using an M-V-C approach.</li>
-			<li>All incoming data will be checked and filtered against malicious inputs.</li>
-			<li>PDO will be used for PHP to database interactions.</li>
-			<li>PDO prepared statements will be used when interacting with the database using PHP.</li>
-			<li>Follow the operation / specification requirement listed below each of the page illustrations; these are the requirements for the specific page.</li>
-			<li>Refer to the comments in the various views, models, and controllers provided in the seed code for additional information.</li>
-		</ol>
-		<h4><i>The Customer Login page</i></h4>
-
-		<img src="../images/336unit2login.png" border="0" alt="Login page illustration for the unit 3 exam" title="Login page illustration for the unit 3 exam">
-		<h3>Operation</h3>
-		<ul>
-			<li>The login page should automatically load when the product registration link is clicked.</li>
-			<li>To log in, the customer can enter his or her email address and click on the Login button.</li>
-		</ul>
-		<h4><i>The Register Product page (view 1)</i></h4>
-		<p class="Figuregraphic"><img src="../images/336unit2regview1.png" border="0" alt="Register product page (view 1) of the CIT 336 Unit 2 exam" title="Register product page (view 1) of the CIT 336 Unit 2 exam" width="825" height="404" /></p>
-		<h3>Operation</h3>
-		<ol>
-			<li>To register a product, the customer can select the product and click on the Register Product button.</li>
-			<li>The customer name must be pre-populated and be non-editable in the registration form.</li>
-		</ol>
-		<h3>Specifications</h3>
-		<ul>
-			<li>The Product drop-down list should include all products. If you have any trouble with this, look ahead to figure 7&ndash;5 in Chapter 7 and figure 8&ndash;11 in Chapter 8.</li>
-		</ul>
-		<h4><i>The Register Product page (view 2)</i></h4>
-		<p><img src="../images/336unit2regview2.png" border="0" alt="Registration view illustration for the unit 3 exam" title="Registration view illustration for the unit 3 exam"></p>
-		<h3>Operation</h3>
-		<ol>
-			<li>The user should only be allowed to register a product once per email address. After the customer clicks on the Register Product button, the application displays a message that indicates that the product was registered successfully or not. This message should include the product&rsquo;s code.</li>
-		</ol>
-		<h2 id="submission">Submission</h2>
-		<ol>
-			<li>Follow the directions in the &ldquo;Set up the Work Space&rdquo; section above.</li>
-			<li>When done, submit your code for review to the Unit 2 Exam Code Submission dropbox.</li>
-			<li><b>The code for the Unit 2 Exam must be submitted for professor review as a zip file. </b>
-				<ol>
-					<li>Locate and zip the folder containing the code for the exam.</li>
-					<li>Be sure the zip file name includes the exam designation, your name, and BYUI email address without the domain: e.g. Exam2-JohnSmith-smi14019.zip.</li>
-					<li>Submit the file by clicking the &ldquo;Open&rdquo; button below, attaching the zip file, adding a comment if desired, and pressing &ldquo;Submit.&rdquo;</li>
-				</ol>
-			</li>
-		</ol>
-		<h2 id="grading">Objectives and Grading</h2>
-		<p>All class objectives are part of this exam.</p>
-		<h4>Objective 1: 9 points</h4>
-		<ol>
-			<li>All views (3 total) must be valid html, CSS, and be semantic in the markup&mdash;1 point for each requirement per view, 9 points total.</li>
-		</ol>
-		<h4>Objective 2: 17 points</h4>
-		<p>PHP is used for:</p>
-		<ol>
-			<li>Controlling the flow of the applications correctly (starting from login:&nbsp;login form &rarr; successful login &rarr; product registration &rarr; form and confirmation) &mdash; 2 points each flow point, 8 points total.</li>
-			<li>Generating the HTML code for the drop-down in the Product Registration page &mdash; 3 points.</li>
-			<li>Capturing the user name from the login and including it in the Product Registration form &mdash; 3 points.</li>
-			<li>Insuring the various functions and components of the M-V-C are in proper scope &mdash; 3 points.</li>
-		</ol>
-		<h4>Objective 3: 18 points</h4>
-		<p>Both the login and product registration applications are constructed using M-V-C, with:</p>
-		<p><i>Login Application</i></p>
-		<ol>
-			<li>Interface residing in views &mdash; 3 points.</li>
-			<li>Logic residing in the controller &mdash; 3 points.</li>
-			<li>Database interactions contained in the model &mdash; 3 points.</li>
-		</ol>
-		<p><i>Product Registration Application</i></p>
-		<ol>
-			<li>Interface residing in views &mdash; 3 points.</li>
-			<li>Logic residing in the controller &mdash; 3 points.</li>
-			<li>Database interactions contained in the model &mdash; 3 points.</li>
-		</ol>
-		<h4>Objective 4: 12 points</h4>
-		<p>SQL queries are operational and properly formed for use in PDO prepared statements for each:</p>
-		<ol>
-			<li>Handling the login process &mdash; 4 points.</li>
-			<li>Populating the product list &mdash; 4 points.</li>
-			<li>Registering the product &mdash; 4 points.</li>
-		</ol>
-		<h4>Objective 5: 10 points</h4>
-		<p>Data validation (server-side) and error handling is present for the:</p>
-		<ol>
-			<li>Login process &mdash; 5 points.</li>
-			<li>Product registration process (the user should only be allowed to register a product once per email address) &mdash; 5 points.</li>
-		</ol>
-		<h4>Objective 6: 15 points</h4>
-		<ol>
-			<li>Login application works &mdash; 5 points.</li>
-			<li>Product registration works &mdash; 5 points.</li>
-			<li>No spelling or grammar errors exist in views &mdash; 5 points (subtract 1 for each error).</li>
-		</ol>
-		</article>
-	</main>
+		<header id="header"><img src="../images/bs_small_banner.jpg" alt="CIT 336 Banner Image"></header>
+		<main>
+			<article id="article">
+				<h1>Unit 2 Exam</h1>
+				<p>This is a temporary placeholder page for the unit 2 exam. The actual exam will be available when the time comes for the exam.</p>
+			</article>
+		</main>
 	</div>
 	<script src="../js/course.js"></script>
 </body>
