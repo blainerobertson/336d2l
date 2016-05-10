@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>FileZilla Configuration | Web Backend Development</title>
+	<meta name="description" content="FileZilla Configuration Tutorial for CIT 336">
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="../css/336course.min.css" media="screen">
+</head>
+
+<body>
+	<div id="main">
+		<header id="header"><img src="../images/bs_small_banner.jpg" alt="CIT 336 Banner Image"></header>
+		<main>
+			<article id="article">
+				<h1>FilaZilla Configuration</h1>
+				<h2 id="maindomain">Introduction</h2>
+				<p>This document outlines the basic steps for configuring Filezilla FTP client to work with a site hosted on Bluehost, Hostmonster or Justhost, other domains may be the same, while others are different, check with your provider is these steps do not work. Directions are provided to both a main domain and to a subdomain. If you are using a different provider, consult your host provider's site for help if needed. A <a href='#video' title='Jump to video'>video demonstrating this process</a> is also available at the bottom of this document.</p>
+
+				<h2>Prerequisites</h2>
+				<p>This document assumes that you already have:</p>
+				<ul>
+					<li>Downloaded and installed the <a href="http://filezilla-project.org/download.php" title="Download the filezilla client" target="_blank">Filezilla client</a>.</li>
+					<li>Created a local folder where all website resources are or will be stored (this will typically be the htdocs folder in XAMPP.</li>
+					<li>Purchased a hosting account with a hosting provider and have the domain name, FTP username and password to the hosting account. Most providers will send you an email with the username and account information for your site. Consult your email or ask the hosting provider if you have any questions.</li>
+				</ul>
+				<h2 id="hmmain">Filezilla connection to the main domain</h2>
+				<ol>
+					<li>Launch Filezilla</li>
+					<li>Click the "Open the Site Manager" button (top left corner, looks like a computer)
+						<br>
+						<img src="../images/fz_pix/opensitemanager.jpg" alt="Image of where the site manager button is located"></li>
+					<li>Click the "New Site" button, a New Site is created in the Select siteEntry area
+						<br>
+						<img src="../images/fz_pix/sitemanager.jpg" alt="Image of the site manager dialog box"></li>
+					<li>Give the site a name - your domain name is suggested
+						<ul>
+							<li>In the General area (on the right)</li>
+							<li>Type your domain name (e.g. mydomain.com) in the host text box on the right</li>
+							<li>Leave the Protocol setting</li>
+							<li>Change the Encryption to "Only use plain FTP (insecure)</li>
+							<li>Change the Logon Type to "Normal"</li>
+							<li>Type your FTP username in the User text box</li>
+							<li>Type your password in the Password text box</li>
+						</ul>
+					</li>
+					<li>Move to the "Advanced" category by clicking on Advanced
+						<br>
+						<img src="../images/fz_pix/sitemanageradvanced.jpg" alt="Site manager advanced settings">
+						<ul>
+							<li>Click the "Browse" button next to the "Default local directory" text box</li>
+							<li>Navigate to the folder that will hold your website — this should be on your laptop's hard drive or a portable storage device.</li>
+							<li>If the folder doesn't exist, create it — your domain name is suggested as the name for the folder</li>
+							<li>Enter "/public_html" into the Default remote directory text box</li>
+							<li>Turn on the checkbox for "Use synchronized browsing"</li>
+						</ul>
+					</li>
+					<li>Move to the "Transfer Settings" tab.
+						<br>
+						<img src="../images/fz_pix/passivesettings.jpg" alt="Setting passive ftp mode in the Transfer Settings tab">
+						<ul>
+							<li>Click the "Passive" radio button in the "Transfer Mode" group.</li>
+							<li>Click the "Connect" button — if everything is correct it should connect to your local directory and the remote host.</li>
+						</ul>
+					</li>
+				</ol>
+
+				<p>Your FTP connection from your local working directory to the remote publishing directory should now be setup. With synchronized browsing enabled when you navigate through your local directory it should also move to the corresponding directory on the remote host.</p>
+
+
+				<h2 id="subdomain">Setting up a Subdomain on your host</h2>
+				<p><strong>You only need to follow these directions if you are using a sub-domain.</strong></p>
+				<p>Note: A subdomain is treated as if it is a stand alone web site, independent of the main domain site. It is not intended to share resources with the main domain. This means that on your local machine the subdomain web site should have its own folder to hold all materials. This folder should be completely independent of the folder which contains the materials used in the main domain web site. Subdomains however do not require a separate domain name, they simple append the subdomin name to the main domain name. For example, if my main domain is <em>mydomain.com</em>, and I create a subdomain named "<strong>sandbox</strong>", then the URL for the subdomain is <em>sandbox.mydomain.com</em>.</p>
+
+				<p>The process for creating a subdomin for the three previously mentioned host providers is the same. If you are using a different host, your process may be different.</p>
+
+				<h3 id="jhsub">Creating a subdomain in your hosting account</h3>
+				<ol>
+					<li>Log in to your hosting account and go to the C-Panel, then scroll down to the area entitled "Domains". In the tools list there is a tool labeled "Subdomains". Click it.</li>
+					<li>Enter the name of the subdomain (e.g. sandbox) in the first text box.</li>
+					<li>The C-Panel tool will automatically show the path to the new subdomain in the Document Root text box.</li>
+					<li>Unless there is an overwhelming reason not to, accept the default location provided.</li>
+					<li>Click "Create".</li>
+					<li>Log out when done.</li>
+					<li>The setup process typically occurs immediately, but may take 1-2 hours depending on the host provider.</li>
+				</ol>
+
+				<h2 id="fzsub">Filezilla connection to a subdomain</h2>
+
+				<p>To create a Filezilla FTP connection that points specifically to the subdomain do the following:</p>
+
+				<ol>
+					<li>Launch Filezilla</li>
+					<li>Click the "Open the Site Manager" button (top left corner, looks like a computer)</li>
+					<li>Click the "New Site" button, a New Site is created in the Select Entry area</li>
+					<li>Give the site a name - your subdomain name appended to the main domain name is suggested (e.g. sandbox.mydomain.com)
+						<ul>
+							<li>In the General area (on the right)</li>
+							<li>Type your main domain name (e.g. mydomain.com) in the host text box on the right</li>
+							<li>Leave the protocol in the default setting</li>
+							<li>Change the Encryption to "Only use plain FTP (insecure)</li>
+							<li>Change the Logon Type to "Normal"</li>
+							<li>Type your FTP username in the User text box</li>
+							<li>Type your password in the Password text box</li>
+
+						</ul>
+					</li>
+					<li>Move to the "Advanced" category by clicking on Advanced
+						<ul>
+							<li>Click the "Browse" button next to the "Default local directory" text box</li>
+							<li>Navigate to the folder that will hold your new subdomain website. Remember that this folder should be outside of and independent from the folder that contains the main domain web site. This folder should be on your laptop's hard drive or a portable storage device.</li>
+							<li>If the folder doesn't exist, create it — your subdomain name is suggested as the name for the folder</li>
+							<li>Enter "/public_html/" followed by the name of the subdomain folder in the Default remote directory text box (e.g. /public_html/sandbox)</li>
+							<li>Turn on the checkbox for "Use synchronized browsing"</li>
+						</ul>
+					</li>
+					<li>Move to the "Transfer Settings" tab.
+						<ul>
+							<li>Click the "Passive" radio button in the "Transfer Mode" group.</li>
+							<li>Click the "Connect" button — if everything is correct it should connect to your local directory and the remote host.</li>
+						</ul>
+					</li>
+				</ol>
+
+				<p>Your Filezilla connections should now be setup and the folder that will store your local files to be used in the web site should now show in the "Local site" panel (on the left) and the remote web site should show in the Remote site panel (on the right) within Filezilla when the site is connected. If any previously established files or folders exist in the local folder they should also be visible on the left. You should not see anything related to the main domain.</p>
+
+				<h2 id='video'>Video Version</h2>
+				<iframe width="420" height="315" src="https://www.youtube.com/embed/0tTh_RAVQ_Q" allowfullscreen></iframe>
+
+
+				<aside class="callout">
+					<h2>FTP?</h2>
+					<p>File Transfer Protocol (FTP) is a means whereby files can be moved and managed from one computer to another. For web sites, a good FTP client allows you to keep track of your site files and other assets. It is an important part of your development arsenal.</p>
+				</aside>
+			</article>
+		</main>
+	</div>
+	<script src="../js/course.js"></script>
+</body>
+
+</html>

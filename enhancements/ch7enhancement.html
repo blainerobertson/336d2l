@@ -5,65 +5,71 @@
 	<meta charset="utf-8">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Ch. 7 Enhancement | Web Backend Development</title>
-	<meta name="description" content="Ch. 7 Enhancement directions">
+	<meta name="description" content="Ch. 7 Enhancement directions for CIT 336">
 	<meta name="viewport" content="width=device-width">
-	<link rel="stylesheet" href="../css/brainhoney.min.css" media="screen">
+	<link rel="stylesheet" href="../css/336course.min.css" media="screen">
 </head>
 
 <body>
-	<header id="page_header"></header>
-	<main>
-		<h1>Ch. 7 Enhancement</h1>
-		<h2>Purpose</h2>
-		<p>Each enhancement provides an opportunity to solve problems and apply the concepts covered in the current and previous topics.</p>
+	<div id="main">
+		<header id="header"><img src="../images/bs_small_banner.jpg" alt="CIT 336 Banner Image"></header>
+		<main>
+			<article id="article">
+				<h1>Ch. 7 Enhancement</h1>
+				<h2>Purpose</h2>
+				<p>Each enhancement provides an opportunity to solve problems and apply the concepts covered in the current and previous topics.</p>
 
-		<h2>Assumptions</h2>
-		<p>This enhancement requires that you start where exercise 7-2 ended. It is anticipated that you will have completed the exercise on your own so that you are familiar with the application and how it operates. You can begin the enhancement by using the exercise solution code provided by the publisher, but using your own working code is encouraged.</p>
+				<h2>Assumptions</h2>
+				<p>This enhancement requires that you start where exercise 7-2 ended. It is anticipated that you will have completed the exercise on your own so that you are familiar with the application and how it operates. You can begin the enhancement by using the exercise solution code provided by the publisher, but using your own working code is encouraged.</p>
 
-		<h2>Make a Copy</h2>
-		<p>Prior to beginning the enhancement, make a copy of the finished exercise folder and paste it to a homework area in your site. Rename the pasted folder to represent the enhancement. Do all work on the enhancement in this location. Do NOT overwrite your chapter exercise doing the enhancement. Keep them separate.</p>
+				<h2>Make a Copy</h2>
+				<p>Prior to beginning the enhancement, make a copy of the finished exercise folder and paste it to a homework area in your site. Rename the pasted folder to represent the enhancement. Do all work on the enhancement in this location. Do NOT overwrite your chapter exercise doing the enhancement. Keep them separate.</p>
 
-		<h2>Application Functionality</h2>
-		<p>The Future Value application will be enhanced by adding two additional features:</p>
+				<h2>Application Functionality</h2>
+				<p>The Future Value application will be enhanced by adding two additional features:</p>
 
-		<ol>
-			<li>Prior to beginning this enhancement, you will need to make a copy of the exercise 7-2 file and convert the copy to use a M-V-C approach. This will require you to separate logic and operation from view. All logic should be placed and function in a controller (named index.php) while interactions (forms and confirmations) should be placed in one or more views with names of your own choosing. This application requires no database interaction, so no model will be required.</li>
-			<li> Add a check box at the bottom of the form view that says: “Compound Interest Monthly”. If this box is checked, the interest should be calculated monthly instead of yearly, so you need to change the Future Value calculation to provide for that. An example of this is shown in this illustration:<br>
-				<img style='max-width: 100%' src='../images/en7-2checkbox.png' alt='Image of the checkbox in the form'>
-			</li>
-			<li> On the confirmation view, display some text that indicates whether the interest is being calculated monthly or yearly. An example of this is shown in this illustration:<br>
-				<img style='max-width: 100%' src='../images/en7-2confirm.png' alt='Image of the confirmation view'></li>
-		</ol>
+				<ol>
+					<li>Prior to beginning this enhancement, you will need to make a copy of the exercise 7-2 file and convert the copy to use a M-V-C approach. This will require you to separate logic and operation from view. All logic should be placed and function in a controller (named index.php) while interactions (forms and confirmations) should be placed in one or more views with names of your own choosing. This application requires no database interaction, so no model will be required.</li>
+					<li> Add a check box at the bottom of the form view that says: “Compound Interest Monthly”. If this box is checked, the interest should be calculated monthly instead of yearly, so you need to change the Future Value calculation to provide for that. An example of this is shown in this illustration:
+						<br>
+						<img style='max-width: 100%' src='../images/en7-2checkbox.png' alt='Image of the checkbox in the form'>
+					</li>
+					<li> On the confirmation view, display some text that indicates whether the interest is being calculated monthly or yearly. An example of this is shown in this illustration:
+						<br>
+						<img style='max-width: 100%' src='../images/en7-2confirm.png' alt='Image of the confirmation view'></li>
+				</ol>
 
 
-		<h2>Submission</h2>
-		<ul>
-			<li>Build and test your code in the local development environment.</li>
-			<li>Check your work to insure that it is operating correctly.</li>
-			<li>When satisfied that the code is operational, upload the enhancement folder to the remote production server.</li>
-			<li>Create a link from your exercises page to the index page in the enhancement folder and test that it works.</li>
-			<li>Fully test the enhancement application for operation on the production server. Correct any errors that are found.</li>
-			<li>When done, submit the controller and view(s) to the code submission dropbox using the directions found there.</li>
-		</ul>
+				<h2>Submission</h2>
+				<ul>
+					<li>Build and test your code in the local development environment.</li>
+					<li>Check your work to insure that it is operating correctly.</li>
+					<li>When satisfied that the code is operational, upload the enhancement folder to the remote production server.</li>
+					<li>Create a link from your exercises page to the index page in the enhancement folder and test that it works.</li>
+					<li>Fully test the enhancement application for operation on the production server. Correct any errors that are found.</li>
+					<li>When done, you should zip your enhancement folder and submit the zip file to the code submission dropbox in this week's module.</li>
+				</ul>
 
-		<h2>Grading Matrix</h2>
+				<h2>Grading Matrix</h2>
 
-		<ul>
-			<li>MVC: Controller contains all logic, flow control and calculations: 5 points in objective 3</li>
-			<li>MVC: view(s) exist and are operational to provide form for inputs and confirmation of completed calculations: 5 points in objective 3</li>
-			<li>MVC: the application moves seamlessly through the controller and views and works as expected: 5 points in objective 3</li>
-			<li>Application: Calculation works to include monthly interest compounding: 5 points in objective 2</li>
-			<li>Application: Calculation is correct for either calculation (yearly or monthly) interest compounding: 5 points in objective 2</li>
-			<li>Application: Confirmation displays if interest is compounded monthly or not: 5 points in objective 2</li>
-		</ul>
+				<ul>
+					<li>MVC: Controller contains all logic, flow control and calculations: 6 points in objective 3</li>
+					<li>MVC: view(s) exist and are operational to provide form for inputs and confirmation of completed calculations: 6 points in objective 3</li>
+					<li>MVC: the application moves seamlessly through the controller and views and works as expected: 6 points in objective 3</li>
+					<li>Application: Calculation works to include monthly interest compounding: 5 points in objective 2</li>
+					<li>Application: Calculation is correct for either calculation (yearly or monthly) interest compounding: 5 points in objective 2</li>
+					<li>Application: Confirmation displays if interest is compounded monthly or not: 5 points in objective 2</li>
+				</ul>
 
-		<h3>Enhancement Value</h3>
-		<ul>
-			<li>Objective 2: 15 points</li>
-			<li>Objective 3: 15 points</li>
-		</ul>
-
-	</main>
+				<h3>Enhancement Value</h3>
+				<ul>
+					<li>Objective 2: 15 points</li>
+					<li>Objective 3: 18 points</li>
+				</ul>
+			</article>
+		</main>
+	</div>
+	<script src="../js/course.js"></script>
 </body>
 
 </html>
