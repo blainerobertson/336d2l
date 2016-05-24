@@ -40,11 +40,11 @@
 						<img src='../images/editcolumn4-1.png' alt='Image of the edit button column'>
 					</li>
 					<li>
-						These buttons should link to an Edit Product page that works similarly to the Add Product page, but this page should show the data for the selected product and allow the data to be updated, then have an Update Product button below the text boxes. See an illustration of the Edit Product page below:
+						These buttons should link to an Edit Product page. The "edit" button should work similarly to the existing delete button, passing only a category and product id. The edit product page should query the database for the product information and display the data in a form, then have an Update Product button below the text boxes. See an illustration of the Edit Product page below:
 						<br>
 						<img src='../images/edititem4-1.png' alt='Image of the edit item page'>
 					</li>
-					<li> When this button is clicked, the product information should be updated using an update products page (similar to the add_product page). Make sure that the productID is not editable in the update products page.</li>
+					<li> When this button is clicked, the product information should be updated using an update products page (similar to the add_product page). Make sure that the productID is not editable in the edit products page.</li>
 					<li>To keep things simple, display the category ID in a text box in the update products page. However, for extra usability to benefit the site visitor, you could use a drop-down list to display the correct category name for the product that’s being edited (it would also have the category_id value stored in the value attribute for the item).</li>
 				</ol>
 
@@ -59,12 +59,15 @@
 				</ul>
 
 				<h2>Grading Matrix</h2>
+				<h3>Objective 1 - 2 points</h3>
 				<ul>
 					<li>Index View: New table column containing <i>Edit</i> buttons is present: 2 points in objective 1</li>
+				</ul>
+				<h3>Objective 2 - 19 points</h3>
+				<ul>
 					<li>Edit view: When button is clicked, new edit product view is presented with data for the item that is editable: 3 points in objective 2</li>
-					<li>Edit view: Contains PHP and SQL code to retrieve data for the item to be edited: 7 points in objective 4</li>
 					<li>Edit view: Change a value for the item. Submit the change. New value appears in the product list: 3 points in objective 2</li>
-					<li>Update controller: This page contains the PHP code to process the update to the database, including:
+					<li>Update page: This page contains the PHP code to process the update to the database, including:
 						<ol>
 							<li>Filter incoming data: 3 points in objective 2</li>
 							<li>Validate inputs: 3 points in objective 2</li>
@@ -73,14 +76,19 @@
 							<li>Return the view where the update can be seen: 1 point in objective 2</li>
 						</ol>
 					</li>
-					<li>Enhancement values:
-						<ul>
-							<li>Objective 1: 2 points</li>
-							<li>Objective 2: 19 points</li>
-							<li>Objective 4: 7 points</li>
-						</ul>
-					</li>
 				</ul>
+				<h3>Objective 4 - 7 points</h3>
+				<ul>
+					<li>Edit view: Contains PHP and SQL code to retrieve data from the database to display in the edit data form to be edited: 7 points in objective 4</li>
+				</ul>
+
+				<h2>Enhancement values</h2>
+				<ul>
+					<li>Objective 1: 2 points</li>
+					<li>Objective 2: 19 points</li>
+					<li>Objective 4: 7 points</li>
+				</ul>
+
 			</article>
 		</main>
 	</div>
